@@ -1,9 +1,12 @@
 # assignment2-AS
 My assignment repository
 
-This repo includes
-1) penguins data set
-2) descriptive data analysis script (rmd), which calculates max and mean bill length, 
-as well as, a box plot displaying body mass by island --- this comes in a markdown output (html)
-3) How to reproduce: Clone the repo, open the descriptive analysis file, in rStudio in a rmd file,
-run the script, obtain outputs in html doc form
+This repo includes:  
+1) The `penguins.csv` dataset  
+2) A descriptive data analysis script (Rmd) that:  
+- Calculates the max, min, and mean bill length  
+- generates a box plot of body mass by island  
+- creates a histogram of bill depth  
+All outputs are rendered in an HTML document.  
+3) How to reproduce, do the following:
+Clone the repo, open the `.Rmd` file in RStudio, run the script, and view the output as an HTML document.
