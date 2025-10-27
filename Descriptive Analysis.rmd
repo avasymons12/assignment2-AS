@@ -1,0 +1,25 @@
+---
+title: "Descriptive Analysis"
+output: html_document
+date: "2025-10-27"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+```{r cars}
+penguins <- read_csv("~/Documents/GitHub/assignment2-AS/penguins.csv")
+
+stats <- penguins %>%
+  summarise(max_acceptance = max(bill_length_mm, na.rm = TRUE),
+          mean_acceptance = mean(bill_length_mm, na.rm = TRUE))
+print(stats)
+
+penguinplot <- ggplot(data=penguins) +
+  geom_boxplot(aes(x=island, y=body_mass_g))+
+  labs(title = "Body Mass of Penguins by Island",x= "Island",y ="Body Mass (g)")
+print(penguinplot)
+```
+
