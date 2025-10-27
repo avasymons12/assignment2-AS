@@ -9,13 +9,16 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 ```
 
+
 ```{r cars}
 penguins <- read_csv("~/Documents/GitHub/assignment2-AS/penguins.csv")
 
 stats <- penguins %>%
   summarise(max_acceptance = max(bill_length_mm, na.rm = TRUE),
+            min_acceptance = min(bill_length_mm, na.rm = TRUE),
           mean_acceptance = mean(bill_length_mm, na.rm = TRUE))
 print(stats)
+
 
 penguinplot <- ggplot(data=penguins) +
   geom_boxplot(aes(x=island, y=body_mass_g))+
