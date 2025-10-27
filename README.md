@@ -1,7 +1,7 @@
 # assignment2-AS
 My assignment repository
 
-This repo has a 
+This repo includes
 1) penguins data set
 2) descriptive data analysis script (rmd), which calculates max and mean bill length, 
 as well as, a box plot displaying body mass by island --- this comes in a markdown output (html)
