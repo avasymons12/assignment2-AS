@@ -19,10 +19,15 @@ stats <- penguins %>%
           mean_acceptance = mean(bill_length_mm, na.rm = TRUE))
 print(stats)
 
-
 penguinplot <- ggplot(data=penguins) +
   geom_boxplot(aes(x=island, y=body_mass_g))+
   labs(title = "Body Mass of Penguins by Island",x= "Island",y ="Body Mass (g)")
 print(penguinplot)
+
+penguinhist <- ggplot(data = penguins) +
+  geom_histogram(aes(x = bill_depth_mm), bins = 30, color = "black", fill = "skyblue") +
+  labs(title = "Distribution of Penguin Bill Depth", x = "Bill Depth (mm)", y = "Count")
+print(penguinhist)
+
 ```
 
